@@ -1,0 +1,155 @@
+<header class="w-full">
+
+  <!-- ================================= -->
+  <!-- BANDEAU BLEU SUPERIEUR -->
+  <!-- ================================= -->
+
+  <div class="h-7 bg-blue-600 flex items-center justify-end gap-3 px-4">
+
+    <span class="w-2.5 h-2.5 rounded-full bg-gray-300"></span>
+
+    <span class="w-2.5 h-2.5 rounded-full bg-orange-400"></span>
+
+    <span class="w-2.5 h-2.5 rounded-full bg-yellow-400"></span>
+
+  </div>
+
+
+  <!-- ================================= -->
+  <!-- NAVIGATION -->
+  <!-- ================================= -->
+
+  <nav class="bg-white border-b border-gray-200">
+
+    <div
+      class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+    >
+
+      <div class="h-20 flex items-center justify-between">
+
+
+        <!-- LOGO -->
+        <a
+          routerLink="/"
+          (click)="fermerMenu()"
+          class="flex flex-col leading-none"
+        >
+
+          <span
+            class="text-xl sm:text-2xl font-bold text-blue-600 tracking-wide"
+          >
+            PRAXIS
+          </span>
+
+          <span
+            class="text-xs sm:text-sm font-bold text-yellow-500 tracking-widest"
+          >
+            UNIVERSITY
+          </span>
+
+        </a>
+
+
+        <!-- ================================= -->
+        <!-- MENU DESKTOP -->
+        <!-- ================================= -->
+
+        <div class="hidden md:flex items-center gap-6 lg:gap-10">
+
+          <a
+            routerLink="/apropos"
+            class="text-sm font-medium text-gray-800 hover:text-blue-600 transition"
+          >
+            À propos
+          </a>
+
+          <a
+            routerLink="/formations"
+            class="text-sm font-medium text-gray-800 hover:text-blue-600 transition"
+          >
+            Nos Formations
+          </a>
+
+          <a
+            routerLink="/contact"
+            class="bg-blue-600 text-white text-sm px-5 py-3 rounded-md hover:bg-blue-700 transition"
+          >
+            Nous Écrire
+          </a>
+
+        </div>
+
+
+        <!-- ================================= -->
+        <!-- BOUTON HAMBURGER -->
+        <!-- ================================= -->
+
+        <button
+          type="button"
+          (click)="ouvrirMenu()"
+          class="md:hidden flex flex-col gap-1.5 p-2"
+          aria-label="Ouvrir le menu"
+        >
+
+          <span
+            class="block w-6 h-0.5 bg-gray-800"
+          ></span>
+
+          <span
+            class="block w-6 h-0.5 bg-gray-800"
+          ></span>
+
+          <span
+            class="block w-6 h-0.5 bg-gray-800"
+          ></span>
+
+        </button>
+
+      </div>
+
+
+      <!-- ================================= -->
+      <!-- MENU MOBILE -->
+      <!-- ================================= -->
+
+      @if (menuOuvert) {
+
+        <div class="md:hidden border-t border-gray-200 py-4">
+
+          <div class="flex flex-col gap-4">
+
+            <a
+              routerLink="/apropos"
+              (click)="fermerMenu()"
+              class="text-gray-800 hover:text-blue-600 transition"
+            >
+              À propos
+            </a>
+
+            <a
+              routerLink="/formations"
+              (click)="fermerMenu()"
+              class="text-gray-800 hover:text-blue-600 transition"
+            >
+              Nos Formations
+            </a>
+
+            <a
+              routerLink="/contact"
+              (click)="fermerMenu()"
+              class="bg-blue-600 text-white text-center px-5 py-3 rounded-md hover:bg-blue-700 transition"
+            >
+              Nous Écrire
+            </a>
+
+          </div>
+
+        </div>
+
+      }
+
+    </div>
+
+  </nav>
+
+</header>
