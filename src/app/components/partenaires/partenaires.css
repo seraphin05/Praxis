@@ -1,0 +1,71 @@
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: defilement 25s linear infinite;
+}
+
+.logo-group {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  padding-right: 50px;
+}
+
+.partner-logo {
+  width: 120px;
+  height: 60px;
+  object-fit: contain;
+  background-color: white;
+  padding: 8px;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+
+/* Tablette */
+@media (max-width: 768px) {
+
+  .logo-group {
+    gap: 35px;
+    padding-right: 35px;
+  }
+
+  .partner-logo {
+    width: 100px;
+    height: 50px;
+    padding: 6px;
+  }
+
+}
+
+
+/* Mobile */
+@media (max-width: 640px) {
+
+  .logo-group {
+    gap: 20px;
+    padding-right: 20px;
+  }
+
+  .partner-logo {
+    width: 75px;
+    height: 40px;
+    padding: 5px;
+  }
+
+}
+
+
+/* Animation */
+
+@keyframes defilement {
+
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+
+}
