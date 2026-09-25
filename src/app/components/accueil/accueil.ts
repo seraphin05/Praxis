@@ -5,6 +5,7 @@ import { APropos } from '../a-propos/a-propos';
 import { Formations } from '../formations/formations';
 import { Partenaires } from '../partenaires/partenaires';
 import { Realisations } from '../realisations/realisations';
+import { Equipe } from '../equipe/equipe';
 
 @Component({
   selector: 'app-accueil',
@@ -13,7 +14,8 @@ import { Realisations } from '../realisations/realisations';
     APropos,
     Formations,
     Partenaires,
-    Realisations
+    Realisations,
+    Equipe
   ],
   templateUrl: './accueil.html'
 })
